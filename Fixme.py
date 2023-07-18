@@ -15,4 +15,4 @@ def squares(n):
 
 
 def lengths(strings):
-    print([len(word) for word in strings ])
+    print([len(word) for word in strings])
