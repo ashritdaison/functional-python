@@ -1,5 +1,5 @@
 def evens(n):
-    print(list(filter(lambda x: x%2 == 0, range(n))))
+    print(list(filter(lambda x: x%2==0, range(n))))
 
 
 def threes(n):
