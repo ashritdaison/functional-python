@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 '''
-Complete each function below so that the test cases pass.
-Your solutions should use the map and filter functions,
-and not for loops or list comprehensions.
+Your solution for each function should be only a single line long.
+In particular, you may not use any loops when implementing these functions;
+instead, you must use either the map and filter functions or list comprehensions.
 '''
 
 def evens(n):
@@ -20,7 +20,7 @@ def evens(n):
     >>> evens(-1)
     []
     '''
-
+    print(list(filter(lambda x: x%2 == 0, range(n))))
 
 def threes(n):
     '''
@@ -37,11 +37,12 @@ def threes(n):
     >>> threes(50)
     [3, 13, 23, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 43]
     '''
+    print(list(filter(lambda x : "3" in str(x), range(n))))
 
 
 def small_words(text):
     '''
-    Returns a list of all words in the input text that are less than 5 characters long.
+    Returns a list of all words in the input text that are less than 4 characters long.
 
     HINT:
     Recall that text.split() converts the text variable into a list of words.
@@ -55,6 +56,8 @@ def small_words(text):
     >>> small_words('a big word is bad')
     ['a', 'big', 'word', 'is', 'bad']
     '''
+    print([word for word in text.split() if len(word) <= 4])
+    #print ([ word for word in text.split() if len(word)<=4 ])
 
 
 def squares(n):
@@ -71,6 +74,8 @@ def squares(n):
     >>> squares(10)
     [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
     '''
+    print(list(map(lambda x: x**2, range(n+1))))
+
 
 
 def lengths(strings):
@@ -84,3 +89,10 @@ def lengths(strings):
     >>> lengths(['this','is','a','test'])
     [4, 2, 1, 4]
     '''
+    print([len(word) for word in strings ])
+
+squares(10)
+evens(10)
+threes(50)
+small_words('a big word is bad')
+lengths(['this','is','a','test'])
